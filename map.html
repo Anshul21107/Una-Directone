@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="index.css">
+
+    <!-- bootstap css  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- icon-link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+
+    <!-- font awesome link  -->
+    <script src="https://kit.fontawesome.com/32c7d2833a.js" crossorigin="anonymous"></script>
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+      <!-- favicon  -->
+      <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+      <link rel="manifest" href="/favicon/site.webmanifest">
+
+</head>
+<body>
+    <section class="food-nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light nav-bar">
+                <a class="navbar-brand nav-logo" id="title-name" href="index.html">Una Directone</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <div id="map"></div>
+    
+    <section id="footer">
+        <i class="social-icon fa-brands fa-facebook"></i>
+        <i class="social-icon fa-brands fa-twitter"></i>
+        <i class="social-icon fa-brands fa-instagram"></i>
+        <i class="social-icon fa-solid fa-envelope"></i>
+        <p>&copy Copyright 2022 Una Directone</p>
+    </section>
+
+
+    <script>
+        function initMap() {
+    const iiituna = { lat: 31.48164303653232, lng: 76.19073638303497};
+    const gurdeep_general = { lat: 31.48527560767237, lng:76.19789408797163};
+    const vishal = {lat: 31.467454010628177,lng:76.26122132626018};
+    const cinema = {lat: 31.46893451899524,lng: 76.2660254863533};
+    const js = {lat:31.46692272076742,lng: 76.26292735326204};
+    const dayal ={lat:31.46870757851351,lng: 76.27058277839485};
+    const sport = {lat:31.464181551302126,lng: 76.28003075118839};
+    const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 12,
+    center: iiituna,
+    });
+    const marker = new google.maps.Marker({
+    position: iiituna,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    title: "IIIT Una"
+    });
+    const gurdeep = new google.maps.Marker({
+    position: gurdeep_general,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    title: "Genear store"
+    });
+    const vishalmega = new google.maps.Marker({
+    position: vishal,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    title: "Vishal Mega Mart"
+    });
+    const rajhanscinema = new google.maps.Marker({
+    position: cinema,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    title: "Rajhans Cinema Hall"
+    });
+    const jsplaza = new google.maps.Marker({
+    position: js,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    title: "JS Plaza"
+    });
+    const dayalsweets = new google.maps.Marker({
+    position: dayal,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    title: "Dayal Sweets"
+    });
+    const sportstadium = new google.maps.Marker({
+    position: sport,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    title: "Indira Gandhi Stadium"
+    });
+
+    }
+    
+    window.initMap = initMap;
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVnMcOvb2mvPknDv30poWPdcsMS1NrUIA&callback=initMap"></script>
+</body>
+</html>
+
+
